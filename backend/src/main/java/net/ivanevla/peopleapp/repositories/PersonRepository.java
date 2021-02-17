@@ -14,7 +14,7 @@ import java.util.List;
 public interface PersonRepository extends CrudRepository<Person, Integer> {
 
     @Query("SELECT p FROM Person p WHERE p.dateOfBirth = :dateOfBirth OR p.personalId = :personalId")
-    List<Person> findAllByDateOfBirthOrPersonalId(
+    Iterable<Person> findAllByDateOfBirthOrPersonalId(
             @Param("personalId") String personalId,
             @Param("dateOfBirth") Date dateOfBirth
     );

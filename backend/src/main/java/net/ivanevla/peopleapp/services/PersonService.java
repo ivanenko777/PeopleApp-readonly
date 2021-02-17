@@ -30,6 +30,10 @@ public class PersonService {
     }
 
     public List<Person> getPeopleList(String personalId, Date dateOfBirth) {
-        return personRepository.findAllByDateOfBirthOrPersonalId(personalId, dateOfBirth);
+        if (personalId == null && dateOfBirth == null) {
+            return (List<Person>) personRepository.findAll();
+        }
+
+        return (List<Person>) personRepository.findAllByDateOfBirthOrPersonalId(personalId, dateOfBirth);
     }
 }
