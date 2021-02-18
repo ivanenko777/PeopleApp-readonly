@@ -7,6 +7,10 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(indexes = {
+        @Index(columnList = "personalId"),
+        @Index(columnList = "dateOfBirth")
+})
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
