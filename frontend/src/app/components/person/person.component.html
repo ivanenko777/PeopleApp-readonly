@@ -1,0 +1,27 @@
+<form (submit)="findPerson(personalId.value, dateOfBirth.value)">
+  <label for="personalId">Personal ID: </label>
+  <input type="text" id="personalId" #personalId />&nbsp;
+  <label for="dateOfBirth">Date of birth: </label>
+  <input type="text" id="dateOfBirth" #dateOfBirth />&nbsp;
+  <button type="submit">Find</button>
+</form>
+<br />
+<div *ngIf="message">{{ message }}</div>
+<table *ngIf="personList.length">
+  <thead>
+    <th>Personal ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Gender</th>
+    <th>Date of birth</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of personList">
+      <td>{{ person.personalId }}</td>
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>{{ person.gender }}</td>
+      <td>{{ person.dateOfBirth }}</td>
+    </tr>
+  </tbody>
+</table>
