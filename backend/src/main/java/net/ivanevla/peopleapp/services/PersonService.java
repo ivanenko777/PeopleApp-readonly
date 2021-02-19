@@ -32,12 +32,15 @@ public class PersonService {
     }
 
     public List<Person> getPeopleList(String personalId, String dateOfBirthString) {
-        if (personalId == null && dateOfBirthString == null) {
+        if (isNullOrEmpty(personalId ) && isNullOrEmpty(dateOfBirthString)) {
             logger.trace("find all people");
             return (List<Person>) personRepository.findAll();
         }
 
-        Date date = parseDate(dateOfBirthString);
+        Date date = null;
+        if (!isNullOrEmpty(dateOfBirthString)) {
+            date = parseDate(dateOfBirthString);
+        }
 
         logger.trace(String.format("find people with personalId=%s, dateOfBirth=%s", personalId, dateOfBirthString));
         return (List<Person>) personRepository.findAllByDateOfBirthOrPersonalId(personalId, date);
@@ -54,5 +57,9 @@ public class PersonService {
             }
         }
         return null;
+    }
+
+    private boolean isNullOrEmpty(String value){
+        return value == null || value.isEmpty();
     }
 }
