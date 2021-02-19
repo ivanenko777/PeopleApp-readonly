@@ -24,8 +24,8 @@ public class PersonController {
 
     @GetMapping("/list")
     public ResponseEntity<List<Person>> getAllPeople(
-            @RequestParam(required = false) String personalId,
-            @RequestParam(required = false) String dateOfBirthString
+            @RequestParam(value = "personalId", required = false) String personalId,
+            @RequestParam(value = "dateOfBirth", required = false) String dateOfBirthString
     ) {
         logger.trace("/api/person/list - accessed");
         List<Person> people = personService.getPeopleList(personalId, dateOfBirthString);
