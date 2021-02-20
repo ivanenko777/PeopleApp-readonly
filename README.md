@@ -1,5 +1,7 @@
 # People App
 
+![Alt text](/docs/screenshot.gif?raw=true "People App Screenshot")
+
 ## Task
 
 1. Implement simple REST service based on spring-boot framework
