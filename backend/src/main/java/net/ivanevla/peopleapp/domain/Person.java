@@ -7,23 +7,28 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(indexes = {
-        @Index(columnList = "personalId"),
-        @Index(columnList = "dateOfBirth")
-})
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonIgnore
+    @Column(name="id")
     private Integer id;
+
+    @Column(name="personal_id")
     private String personalId;
+
+    @Column(name="first_name")
     private String firstName;
+
+    @Column(name="last_name")
     private String lastName;
 
     @Enumerated(EnumType.STRING)
+    @Column(name="gender")
     private Gender gender;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
+    @Column(name="date_of_birth")
     private Date dateOfBirth;
 
     public Person() {

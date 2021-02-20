@@ -1,3 +1,18 @@
+CREATE TABLE PERSON
+(
+    id            INTEGER NOT NULL AUTO_INCREMENT,
+    personal_id   VARCHAR(255),
+    date_of_birth TIMESTAMP,
+    first_name    VARCHAR(255),
+    last_name     VARCHAR(255),
+    gender        VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+CREATE INDEX ON PERSON(personal_id);
+CREATE INDEX ON PERSON(date_of_birth);
+
+
 CREATE TABLE logging_event
 (
     timestmp          BIGINT       NOT NULL,

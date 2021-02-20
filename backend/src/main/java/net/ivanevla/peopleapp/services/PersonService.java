@@ -1,6 +1,5 @@
 package net.ivanevla.peopleapp.services;
 
-import net.ivanevla.peopleapp.domain.Gender;
 import net.ivanevla.peopleapp.domain.Person;
 import net.ivanevla.peopleapp.exception.InvalidDateException;
 import net.ivanevla.peopleapp.repositories.PersonRepository;
@@ -21,18 +20,8 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public Person addPerson(String personalId, String dateOfBirthString, String firstName, String lastName, String genderString) {
-        Date dateOfBirth = parseDate(dateOfBirthString);
-        Gender gender = Gender.valueOf(genderString.toUpperCase());
-
-        Person person = new Person(personalId, dateOfBirth, firstName, lastName, gender);
-        Person personFromDb = personRepository.save(person);
-        logger.trace(String.format("Person added %s", personFromDb.getPersonalId()), personFromDb.toString());
-        return personFromDb;
-    }
-
     public List<Person> getPeopleList(String personalId, String dateOfBirthString) {
-        if (isNullOrEmpty(personalId ) && isNullOrEmpty(dateOfBirthString)) {
+        if (isNullOrEmpty(personalId) && isNullOrEmpty(dateOfBirthString)) {
             logger.trace("find all people");
             return (List<Person>) personRepository.findAll();
         }
@@ -59,7 +48,7 @@ public class PersonService {
         return null;
     }
 
-    private boolean isNullOrEmpty(String value){
+    private boolean isNullOrEmpty(String value) {
         return value == null || value.isEmpty();
     }
 }
