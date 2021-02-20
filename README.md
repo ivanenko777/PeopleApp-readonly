@@ -41,3 +41,20 @@
 - rxjs 6.6.0
 - tslib 2.0.0
 - zone.js 0.11.3
+
+## Try it with Docker
+
+You need Docker installed
+
+```
+# Run app:
+docker-compose build
+docker-compose up -d
+```
+
+Open [http://localhost/](http://localhost/) in browser.
+
+```
+# Stop app:
+docker-compose down
+```
