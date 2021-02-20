@@ -20,7 +20,7 @@ public class PersonService {
     @Autowired
     private PersonRepository personRepository;
 
-    public List<Person> getPeopleList(String personalId, String dateOfBirthString) {
+    public List<Person> getPersonList(String personalId, String dateOfBirthString) {
         if (isNullOrEmpty(personalId) && isNullOrEmpty(dateOfBirthString)) {
             logger.trace("find all people");
             return (List<Person>) personRepository.findAll();

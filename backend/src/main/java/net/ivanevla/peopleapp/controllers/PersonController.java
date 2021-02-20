@@ -26,7 +26,7 @@ public class PersonController {
             @RequestParam(value = "dateOfBirth", required = false) String dateOfBirthString
     ) {
         logger.trace("/api/person/list - accessed");
-        List<Person> people = personService.getPeopleList(personalId, dateOfBirthString);
+        List<Person> people = personService.getPersonList(personalId, dateOfBirthString);
         return new ResponseEntity<>(people, HttpStatus.OK);
     }
 }
