@@ -41,7 +41,7 @@ export class PersonComponent implements OnInit {
           this.personList = data;
           this.message = '';
           if (!this.personList.length) {
-            this.message = 'Person is not found!';
+            this.message = 'Person not found!';
           }
         },
         (error) => {
