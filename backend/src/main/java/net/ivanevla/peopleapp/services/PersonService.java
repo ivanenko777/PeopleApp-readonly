@@ -53,7 +53,7 @@ public class PersonService {
             try {
                 return simpleDateFormat.parse(dateOfBirthString);
             } catch (ParseException e) {
-                throw new InvalidDateException("Invalid date format");
+                throw new InvalidDateException("Invalid date");
             }
         }
         return null;
