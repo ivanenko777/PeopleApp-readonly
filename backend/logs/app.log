@@ -1,0 +1,16 @@
+2021-02-18 11:12:39,569 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 39011121234
+2021-02-18 11:12:39,574 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 37603311234
+2021-02-18 11:12:39,578 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 39307161234
+2021-02-18 11:12:39,580 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 36907161234
+2021-02-18 11:12:39,584 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 37007201234
+2021-02-18 11:12:39,586 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 39006051234
+2021-02-18 11:12:39,589 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 47310171234
+2021-02-18 11:12:39,591 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 47008311234
+2021-02-18 11:12:39,594 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 47310121234
+2021-02-18 11:12:39,596 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 48002081234
+2021-02-18 11:12:39,598 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 46607171234
+2021-02-18 11:12:39,601 TRACE net.ivanevla.peopleapp.services.PersonService [restartedMain] Person added 49006051234
+2021-02-18 11:12:57,013 TRACE net.ivanevla.peopleapp.controllers.PersonController [http-nio-8080-exec-1] /api/person/list - accessed
+2021-02-18 11:12:57,017 TRACE net.ivanevla.peopleapp.services.PersonService [http-nio-8080-exec-1] find people with personalId=null, dateOfBirth=1990-11-12
+2021-02-18 11:13:00,951 TRACE net.ivanevla.peopleapp.controllers.PersonController [http-nio-8080-exec-3] /api/person/list - accessed
+2021-02-18 11:13:00,953 TRACE net.ivanevla.peopleapp.services.PersonService [http-nio-8080-exec-3] find all people
