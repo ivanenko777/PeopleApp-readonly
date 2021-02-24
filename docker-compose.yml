@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+
+  backend:
+    container_name: covid19app-backend
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    command: java -jar app.jar
+    ports:
+      - "8080:8080"
+ 
+  frontend:
+    container_name: covid19app-frontend
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    command: nginx -g "daemon off;"
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - CHOKIDAR_USEPOLLING=true  
+    stdin_open: true
