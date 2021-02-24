@@ -33,13 +33,13 @@
 
 ## Technologies and libraries
 
-- Java 11 LTS
-- Spring Boot 2.4.2
-- Spring Framework 5.3.3
-- h2 1.4.200
-- Junit Jupiter 5.7.0
+- **Java 11 LTS**
+- **Spring Boot 2.4.2**
+- **Spring Framework 5.3.3**
+- **h2 1.4.200**
+- **Junit Jupiter 5.7.0**
 - NodeJs 14.15.5 LTS
-- Angular 11.2.1
+- **Angular 11.2.1**
 - rxjs 6.6.0
 - tslib 2.0.0
 - zone.js 0.11.3
